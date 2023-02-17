@@ -14,8 +14,8 @@ App.addListener('appStateChange', async (state) => {
   if (state.isActive) {
     // Do the download during user active app time to prevent failed download
     data = await CapacitorUpdater.download({
-      version: '1.0.0',
-      url: 'https://github.com/divyasonara7/Capgo/releases/tag/v1.0.0/dist.zip',
+      version: '1.0.1',
+      url: 'https://github.com/divyasonara7/Capgo/releases/tag/v1.0.1/dist.zip',
     })
   }
   if (!state.isActive && data.version !== "") {
