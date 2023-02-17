@@ -24,6 +24,7 @@ quasar dev -m capacitor -T android
 
 quasar dev -m capacitor -T ios
 ```
+Note: appropriate software must be installed on your system.
 
 
 ### Build mobile app for production
