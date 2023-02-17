@@ -2,6 +2,12 @@
 
 A Quasar Framework app
 
+# Clone 
+```bash
+git clone git@github.com:divyasonara7/Capgo.git
+cd Capgo
+```
+
 ## Install the dependencies
 ```bash
 npm install
