@@ -9,6 +9,8 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@capacitor/app": "^4.1.1",
+    "@capacitor/splash-screen": "^4.1.4",
     "@capgo/capacitor-updater": "^4.17.35",
     "@quasar/extras": "^1.0.0",
     "quasar": "^2.6.0",
