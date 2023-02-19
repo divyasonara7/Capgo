@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-  <h3 class="text-center">Hello, From simform Solutions!</h3>
+  <h3 class="text-center">Hello, From <img src="../assets/logo.png">Simform Solutions!</h3>
   </q-page>
 </template>
 
