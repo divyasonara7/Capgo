@@ -7,25 +7,25 @@ import { defineComponent } from 'vue'
 import { CapacitorUpdater } from '@capgo/capacitor-updater';
 import { SplashScreen } from '@capacitor/splash-screen';
 import { App } from '@capacitor/app';
-let data = { version: "" };
 CapacitorUpdater.notifyAppReady();
 
+let version;
 App.addListener('appStateChange', async (state) => {
   if (state.isActive) {
-    // Do the download during user active app time to prevent failed download
-    data = await CapacitorUpdater.download({
-      version: '1.0.2',
-      url: 'https://github.com/divyasonara7/Capgo/releases/tag/v1.0.2/dist.zip',
+    // Ensure download occurs while the app is active, or download may fail
+    version = await CapacitorUpdater.download({
+      url: 'https://github.com/divyasonara/Capgo/releases/download/1.0.3/dist.zip',
     })
   }
-  if (!state.isActive && data.version !== "") {
-    // Do the switch when user leave app
+
+  if (!state.isActive && version) {
+    // Activate the update when the application is sent to background
     SplashScreen.show()
     try {
-      await CapacitorUpdater.set(data)
-    } catch (err) {
-      console.log(err)
-      SplashScreen.hide() // in case the set fail, otherwise the new app will have to hide it
+      await CapacitorUpdater.set(version);
+      // At this point, the new version should be active, and will need to hide the splash screen
+    } catch (e) {
+      SplashScreen.hide() // Hide the splash screen again if something went wrong
     }
   }
 })
