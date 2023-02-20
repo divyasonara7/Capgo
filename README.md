@@ -43,7 +43,7 @@ quasar build -m capacitor -T ios
 
 ### How to test Live updates of Installed app Using Manual way of Capgo
 
-step 1: above command run application into android studio. and application is ruuning.
+step 1: `quasar dev -m capacitor -T android` command run application into android studio. and application is ruuning.
 
 go to android studio -> Build ->  Build Bundle(s)/APK(s) -> Build APK(s)
 
