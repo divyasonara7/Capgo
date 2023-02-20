@@ -1,4 +1,4 @@
-# Capgo (Vue+quasar+capacitor+ capgo)
+# Demo App (Vue+quasar+capacitor+ capgo)
 
 A Quasar Framework app
 
